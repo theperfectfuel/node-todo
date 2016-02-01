@@ -1,0 +1,18 @@
+<h1>The List</h1>
+
+<form method="post" action="client_to_server"> 
+	<input type="text" name="userData"> 
+	<input type="submit">
+</form>
+
+{{#each item}} 
+<li>
+	{{this.userData}}
+	<a href="delete/{{this.id}}">
+		Delete
+	</a>
+	<a href="edit/{{this.id}}">
+		Edit
+	</a>
+</li> 
+{{/each}}
